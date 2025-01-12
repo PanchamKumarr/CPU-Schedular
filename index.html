@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduling Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CPU Scheduling Visualizer</h1>
+        <p>Explore different CPU scheduling algorithms through visualizations and examples.</p>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Input Data</h2>
+            <form id="process-form">
+                <label for="num-processes">Number of Processes:</label>
+                <input type="number" id="num-processes" name="num-processes" required>
+
+                <label for="burst-time">Burst Time (comma-separated):</label>
+                <input type="text" id="burst-time" name="burst-time" required>
+
+                <label for="arrival-time">Arrival Time (comma-separated):</label>
+                <input type="text" id="arrival-time" name="arrival-time" required>
+
+                <label for="priority">Priority (comma-separated):</label>
+                <input type="text" id="priority" name="priority">
+
+                <label for="quantum">Time Quantum (for Round Robin):</label>
+                <input type="number" id="quantum" name="quantum">
+
+                <label for="algorithm">Choose Scheduling Algorithm:</label>
+                <select id="algorithm" name="algorithm">
+                    <option value="fcfs">First Come First Serve (FCFS)</option>
+                    <option value="sjf">Shortest Job First (SJF)</option>
+                    <option value="rr">Round Robin (RR)</option>
+                    <option value="priority">Priority Based Scheduling</option>
+                    <option value="srtf">Shortest Remaining Time (SRTF)</option>
+                    <option value="mlq">Multiple-Level Queues Scheduling</option>
+                </select>
+
+                <button type="submit">Run Algorithm</button>
+            </form>
+        </section>
+
+        <section class="output-container">
+            <h2>Visualization</h2>
+            <div id="output"></div>
+        </section>
+
+        <section class="algorithm-explanation">
+            <h2>Algorithm Explanations</h2>
+            <div id="explanation"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Your Name | CPU Scheduling Visualizer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
